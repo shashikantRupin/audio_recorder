@@ -12,9 +12,7 @@ const app = express()
       
 // ))
 app.use(cors(
-      {
-          
-      }
+
 ))
 connectDB()
 app.use(express.json())
