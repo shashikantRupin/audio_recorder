@@ -9,9 +9,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: ["https://recorerapp.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true,
+    origin: ["https://recorerapp.vercel.app"]
   })
 );
 connectDB()
