@@ -12,6 +12,7 @@ const GetAudioList = () => {
   }, []);
 
   const decodeFileBase64 = (str) => {
+    // from bytestream to percentage-encoding, to origin string.
     return decodeURIComponent(
       atob(str)
         .split("")
@@ -22,20 +23,26 @@ const GetAudioList = () => {
     );
   };
 
-  const decodedBase64 = decodeFileBase64(
+  const decodeBase64 = decodeFileBase64(
     fileBase64String.substring(fileBase64String.indexOf(",") + 1)
   );
 
-  // Check if audio or audio.audios is undefined before mapping
-  const audioList = audio?.audios || [];
-
   return (
-    <div className="rounded p-3 my-2 shadow-lg bg-purple text-white">
-      <h3 className="text-center text-success lead">
-        <u>Previously Saved Recordings</u>
+    <div className="rounded bg-purple p-3 my-2">
+      <h3 className="text-center text-success lead ">
+        <u className="fw-bold">Previously Saved Recordings</u>
       </h3>
-      {audioList
-        .slice()
+      <p className="text-center mb-0 text-white">
+        Cannot save data more than <code>100Kb</code> to the database.
+      </p>
+      <span className="text-muted text-center ">
+        {" "}
+        <p className="text-white">
+          Please check file size in console, at the end of base64 text.
+        </p>{" "}
+      </span>
+      {audio?.audios
+        ?.slice()
         .reverse()
         .map((item) => (
           <div key={item._id}>
@@ -43,8 +50,14 @@ const GetAudioList = () => {
             <audio src={item.audio} controls className="w-100" />
             <br />
             <span>
-              <span className="fw-bolder">Date/Time</span>{" "}
-              {new Date(item.createdAt).toLocaleString("en-US")}{" "}
+              <span className="fw-bolder">
+                {" "}
+                <p className="text-success">Date/Time</p>{" "}
+              </span>{" "}
+              <p className="text-warning">
+                {" "}
+                {new Date(item.createdAt).toLocaleString("en-US")}
+              </p>{" "}
             </span>
             <hr className="m-2" />
           </div>
