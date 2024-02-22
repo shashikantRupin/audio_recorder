@@ -11,10 +11,10 @@ npm run start
 
 ## Screenshots
 
-![Screenshot 1](ss1)
+![Screenshot 1](ss1.png)
 
 
-![Screenshot 2](ss2)
+![Screenshot 2](ss2.png)
 
 ## Getting Started
 
