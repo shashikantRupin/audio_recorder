@@ -11,11 +11,10 @@ npm run start
 
 ## Screenshots
 
-![Screenshot 1](/Screenshot.png)
+![Screenshot 1](Screenshot.png)
 
-*The "Click me" button is visible at the top, and the background image.*
 
-![Screenshot 2](/Screenshot2.png)
+![Screenshot 2](Screenshot2.png)
 
 ## Getting Started
 
