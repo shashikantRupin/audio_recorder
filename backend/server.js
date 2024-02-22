@@ -9,7 +9,11 @@ const app = express()
 
 app.use(
   cors({
-    origin: ["https://recorerapp.vercel.app", "http://localhost:3001"],
+    origin: [
+      "https://frontend-vert-delta-13.vercel.app",
+      "https://recorerapp.vercel.app",
+      "http://localhost:3000",
+    ],
   })
 );
 connectDB()
