@@ -7,12 +7,11 @@ const port = process.env.PORT || 5001
 
 const app = express()
 
-
-// app.use(cors(
-      
-// ))
 app.use(cors(
-
+  {origin:["https://deploy-mern-1whq.vercel.app"],
+  methods:["POST","GET"],
+  credentials:true
+}
 ))
 connectDB()
 app.use(express.json())
