@@ -11,10 +11,10 @@ npm run start
 
 ## Screenshots
 
-![Screenshot 1](ss1.png)
+![Screenshot 1](/images/ss1.png)
 
 
-![Screenshot 2](ss2.png)
+![Screenshot 2](/images/ss2.png)
 
 ## Getting Started
 
@@ -23,4 +23,4 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/shashikantRupin/travelopia-assignment]
+   git clone [https://github.com/shashikantRupin/audio_recorder]
