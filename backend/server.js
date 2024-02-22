@@ -11,8 +11,8 @@ app.use(
   cors({
     origin: [
       "https://frontend-vert-delta-13.vercel.app",
-      "http://localhost:3000"
-    ]
+      "http://localhost:3000",
+    ],
   })
 );
 connectDB()
@@ -22,7 +22,6 @@ app.get("/", (req,res)=>{
       res.json({ message: "server is running" });
 })
 // Increase payload size limit
-app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(express.urlencoded({extended: true}))
 app.use('/api/audio', require('./routes/audio_routes'))

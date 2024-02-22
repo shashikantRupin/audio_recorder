@@ -32,20 +32,11 @@ const GetAudioList = () => {
       <h3 className="text-center text-success lead ">
         <u className="fw-bold">Previously Saved Recordings</u>
       </h3>
-      <p className="text-center mb-0 text-white">
-        Cannot save data more than <code>100Kb</code> to the database.
-      </p>
-      <span className="text-muted text-center ">
-        {" "}
-        <p className="text-white">
-          Please check file size in console, at the end of base64 text.
-        </p>{" "}
-      </span>
       {audio?.audios
         ?.slice()
         .reverse()
         .map((item) => (
-          <div key={item._id}>
+          <div key={item._id} >
             <h4 className="d-none">{item.audio}</h4>
             <audio src={item.audio} controls className="w-100" />
             <br />

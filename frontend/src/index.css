@@ -24,6 +24,7 @@ body {
   background-color: #04004c;
 }
 
+
 .player .imgbx {
   position: relative;
   width: 100%;
@@ -43,6 +44,8 @@ body {
   width: 100%;
   outline: none;
 }
+
+
 
 @media screen and (max-width: 768px) {
   .player {
