@@ -11,9 +11,8 @@ app.use(
   cors({
     origin: [
       "https://frontend-vert-delta-13.vercel.app",
-      "https://recorerapp.vercel.app",
-      "http://localhost:3000",
-    ],
+      "http://localhost:3000"
+    ]
   })
 );
 connectDB()
