@@ -16,15 +16,13 @@ app.use(
   })
 );
 connectDB()
-app.use(express.json())
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 app.get("/", (req,res)=>{
       res.json({ message: "server is running" });
 })
-// Increase payload size limit
-app.use(express.urlencoded({ limit: '50mb', extended: true }));
-app.use(express.urlencoded({extended: true}))
+
+
 app.use('/api/audio', require('./routes/audio_routes'))
-
-
 app.listen(port, () => console.log(`Server is Running at ${port}`))
