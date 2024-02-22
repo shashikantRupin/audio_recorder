@@ -30,16 +30,10 @@ const GetAudioList = () => {
   const audioList = audio?.audios || [];
 
   return (
-    <div className="rounded p-3 my-2">
+    <div className="rounded p-3 my-2 shadow-lg bg-purple text-white">
       <h3 className="text-center text-success lead">
         <u>Previously Saved Recordings</u>
       </h3>
-      <p className="text-center mb-0">
-        Cannot save data more than <code>100Kb</code> to the database.
-      </p>
-      <span className="text-muted text-center">
-        Please check file size in console, at the end of base64 text.
-      </span>
       {audioList
         .slice()
         .reverse()

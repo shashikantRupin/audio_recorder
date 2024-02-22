@@ -9,7 +9,7 @@ body {
   justify-content: center;
   /* align-items: center; */
   min-height: 100vh;
-  background: linear-gradient(44deg, #70ad14, #fffde7);
+  background: linear-gradient(44deg, #212220, #252f38);
 }
 
 .player {
@@ -17,8 +17,11 @@ body {
   width: 450px;
   margin-top: 50px;
   background: #f1f3f4;
-  box-shadow: 0 50px 80px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 50px 80px rgba(92, 76, 76, 0.15);
   border-radius: 6px;
+}
+.bg-purple {
+  background-color: #04004c;
 }
 
 .player .imgbx {
@@ -39,4 +42,64 @@ body {
 .player audio {
   width: 100%;
   outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .player {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  body {
+    margin-right: 20px;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: #dfa900;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin: 20px;
+  }
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .player {
+    width: 90%;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  body {
+    margin-right: 20px;
+  }
+}
+
+/* Example of further customization for smaller screens */
+@media screen and (max-width: 576px) {
+  .player {
+    width: 95%;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  body {
+    margin-right: 10px;
+  }
 }

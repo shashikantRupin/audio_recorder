@@ -112,29 +112,56 @@ const App = () => {
 
   return (
     <>
+      <h1 className="text-center text-danger mt-5 mb-3">Audio Recoder</h1>
       <form onSubmit={submitHandler} className="d-flex p-2 player">
         {state.isRecording ? (
           <>
-            <a className="btn btn-outline-danger" onClick={stopRecording} disabled={!state.isRecording} style={{ paddingTop: '12px' }}>
+            <a
+              className="btn btn-outline-danger"
+              onClick={stopRecording}
+              disabled={!state.isRecording}
+              style={{ paddingTop: "12px" }}
+            >
               <BsStopFill />
             </a>
             {state.isPaused ? (
-              <a className="btn btn-outline-primary" onClick={resumeRecording} disabled={!state.isRecording} style={{ paddingTop: '12px' }}>
+              <a
+                className="btn btn-outline-primary"
+                onClick={resumeRecording}
+                disabled={!state.isRecording}
+                style={{ paddingTop: "12px" }}
+              >
                 Resume
               </a>
             ) : (
-              <a className="btn btn-outline-secondary" onClick={pauseRecording} disabled={!state.isRecording} style={{ paddingTop: '12px' }}>
+              <a
+                className="btn btn-outline-secondary"
+                onClick={pauseRecording}
+                disabled={!state.isRecording}
+                style={{ paddingTop: "12px" }}
+              >
                 <BsPauseFill />
               </a>
             )}
           </>
         ) : (
-          <a className="btn btn-outline-primary" onClick={startRecording} disabled={state.isRecording} style={{ paddingTop: '12px' }}>
+          <a
+            className="btn btn-outline-primary"
+            onClick={startRecording}
+            disabled={state.isRecording}
+            style={{ paddingTop: "12px" }}
+          >
             <BsMic />
           </a>
         )}
 
-        <audio src={state.mediaURL} value={audio} onChange={(e) => setState({ audio: e.target.value })} controls autoPlay />
+        <audio
+          src={state.mediaURL}
+          value={audio}
+          onChange={(e) => setState({ audio: e.target.value })}
+          controls
+          autoPlay
+        />
         <button type="submit" className="btn btn-light border">
           <BsDatabaseFillAdd />
         </button>
